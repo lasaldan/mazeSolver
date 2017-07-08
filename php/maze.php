@@ -21,15 +21,11 @@
   function solve($row, $col) {
     global $maze, $finishRow, $finishCol;
 
-    //print_maze();
-
     if($maze[$row][$col] == 0 || $maze[$row][$col] == "#")
       return false;
 
-    if($row == $finishRow && $col == $finishCol) {
-      print("FOUND END");
+    if($row == $finishRow && $col == $finishCol)
       return true;
-    }
 
     $maze[$row][$col] = "#";
 
