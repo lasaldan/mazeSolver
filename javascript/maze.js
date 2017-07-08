@@ -22,14 +22,14 @@ function solve(row, col){
   if(!maze[row][col]) return false
   if(row == finishRow && col == finishCol) return true
 
-  maze[row][col] == "#"
+  maze[row][col] = "#"
 
   if (solve(row-1, col)) return true
   if (solve(row, col+1)) return true
   if (solve(row+1, col)) return true
   if (solve(row, col-1)) return true
 
-  maze[row][col] == "0"
+  maze[row][col] = "0"
 
   return false
 
