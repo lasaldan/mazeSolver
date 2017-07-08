@@ -31,7 +31,7 @@ def solve(row, col):
         return True
 
     if solve(row, col+1):
-        return False
+        return True
 
     if solve(row+1, col):
         return True
